@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Car Rental</title>
+    <link rel="stylesheet" href="./styles/home.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Car Rental</h1>
+        <nav>
+            <ul>
+                <li><a href="./Rent now.html">Rent now</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Rent Your Dream Car Today</h2>
+            <p>Explore our wide selection of vehicles and book your rental online.</p>
+            <a href="./services.html" class="button">View Services</a>
+        </section>
+
+        <section id="featured-cars">
+            <h2>Featured Cars</h2>
+            <div class="car-container">
+                <div class="car">
+                    <h3>TX</h3>
+                    <p>The TX is a luxury SUV manufactured by Toyota</p>
+                    <img src="./images/tx.jpg" alt="TX">
+                    
+                </div>
+                <div class="car">
+                    <h3>Harrier</h3>
+                    <p>The Harrier is a stylish and reliable mid-size SUV manufactured by Toyota</p>
+                    <img src="./images/Harrier.jpg" alt="Harrier">
+                    
+
+                   
+                    
+                </div>
+                <div class="car">
+                    <h4>Toureg</h4>
+                    <p>The Touareg is a luxury SUV manufactured by Volkswagen</p>
+                    <img src="./images/toureg.jpg" alt="Toureg">
+                    
+                </div>
+                <div class="car">
+                    <h5>Pajero</h5>
+                    <p>The Pajero is a rugged and versatile SUV produced by Mitsubishi</p>
+                    <img src="./images/pajero.jpg" alt="Pajero">
+                </div>
+                
+                <div class="car">
+                    <h6>Sedan</h6>
+                    <p>A sedan is a practical and comfortable passenger car with four doors, offering seating for four to five passengers and separate compartments for cargo and the engine.</p>
+                    <img src="./images/background.jpg" alt="Sedan">
+                </div>
+            </div>
+            <div id="car-description">
+                <!-- Car description will be displayed here -->
+            </div>
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Car Rental. All rights reserved.</p>
+    </footer>
+
+    <script src="home.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const prevButton = document.getElementById('prev');
+            const nextButton = document.getElementById('next');
+            const cars = document.querySelectorAll('.car');
+            const carDescription = document.getElementById('car-description');
+            let currentIndex = 0;
+
+            function showCar(index) {
+                cars.forEach((car, i) => {
+                    if (i === index) {
+                        car.style.display = 'block';
+                        carDescription.innerHTML = car.getAttribute('data-description');
+                    } else {
+                        car.style.display = 'none';
+                    }
+                });
+            }
+
+            function prevCar() {
+                currentIndex = (currentIndex === 0) ? cars.length - 1 : currentIndex - 1;
+                showCar(currentIndex);
+            }
+
+            function nextCar() {
+                currentIndex = (currentIndex === cars.length - 1) ? 0 : currentIndex + 1;
+                showCar(currentIndex);
+            }
+
+            prevButton.addEventListener('click', prevCar);
+            nextButton.addEventListener('click', nextCar);
+
+            // Show the first car initially
+            showCar(currentIndex);
+        });
+    </script>
+</body>
+</html>

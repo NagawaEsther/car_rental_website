@@ -1,0 +1,97 @@
+/* home.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Add a light background color */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+section p {
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Car Styles */
+.car-container {
+    display: flex;
+    overflow-x: hidden; /* Hide overflow to create sliding effect */
+}
+
+.car {
+    flex: 0 0 auto; /* Ensure each car has fixed width */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center; 
+}
+
+
+
+.car img {
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.car h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.car p {
+    color: #666;
+}

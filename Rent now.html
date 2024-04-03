@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./styles/Rent now.css">
 </head>
 <body>
     <div class="container">
-        <h1>Car Rental</h1>
+        <h1>Rent now</h1>
+        
         <form id="booking-form" action="submit.php" method="post">
             <label for="pickup-date">Pickup Date:</label>
             <input type="date" id="pickup-date" name="pickup-date" required>
@@ -20,7 +21,7 @@
             <select id="car-type" name="car-type" required>
                 <option value="">Select Car Type</option>
                 <option value="Harrier">Harrier</option>
-                <option value="My_car">My_car</option>
+                <option value=" Sedan">Sedan</option>
                 <option value="Pajero">Pajero</option>
                 <option value="TX">TX</option>
                 <option value="Toureg">Toureg</option>
@@ -31,9 +32,10 @@
         <div id="confirmation" style="display: none;">
             <h2>Booking Confirmation</h2>
             <p>Your booking has been confirmed. Thank you!</p>
-            <p><a href="index.html">Return to home page</a></p>
+            
         </div>
     </div>
     <script src="script.js"></script>
+    <a href="./home.html">back to home</a>
 </body>
 </html>
